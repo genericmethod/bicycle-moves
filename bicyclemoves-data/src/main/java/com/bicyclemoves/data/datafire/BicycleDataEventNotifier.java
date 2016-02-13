@@ -6,7 +6,7 @@ import com.genericmethod.feedfire.cache.CacheService;
 import com.genericmethod.feedfire.event.DataFireEventNotifier;
 import com.genericmethod.feedfire.event.DataFireEventProducer;
 import com.genericmethod.feedfire.event.Event;
-
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -15,6 +15,8 @@ import java.util.List;
 
 @Component
 public class BicycleDataEventNotifier extends DataFireEventNotifier<BicycleDock,BicyclesDataEventType>{
+
+  private static final Logger log = Logger.getLogger(BicycleDataEventNotifier.class);
 
   @Autowired public BicycleDataCacheService bicycleDataCacheService;
   @Autowired public BicycleDataEventProducer bicycleDataEventProducer;
@@ -44,11 +46,12 @@ public class BicycleDataEventNotifier extends DataFireEventNotifier<BicycleDock,
     if (cachedObj != null && feedObject != null) {
 
       if (!cachedObj.getCyclesAvailable().equals(feedObject.getCyclesAvailable())){
-        events.add(new Event<BicycleDock, BicyclesDataEventType>(feedObject,BicyclesDataEventType.BICYCLE_AVAILABLITY_CHANGED));
+        log.info(cachedObj.getName() + " BICYCLE_AVAILABLITY_CHANGED " + cachedObj.getCyclesAvailable() + " >> " + feedObject.getCyclesAvailable());
+        events.add(new Event<BicycleDock, BicyclesDataEventType>(feedObject, BicyclesDataEventType.BICYCLE_AVAILABLITY_CHANGED));
       }
 
       if (!cachedObj.getCyclesBroken().equals(feedObject.getCyclesBroken())){
-        events.add(new Event<BicycleDock, BicyclesDataEventType>(feedObject,BicyclesDataEventType.BICYCLE_BROKEN_CHANGED));
+        events.add(new Event<BicycleDock, BicyclesDataEventType>(feedObject, BicyclesDataEventType.BICYCLE_BROKEN_CHANGED));
       }
     }
 

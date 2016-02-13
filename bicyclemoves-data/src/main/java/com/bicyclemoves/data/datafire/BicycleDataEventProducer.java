@@ -15,7 +15,7 @@ public class BicycleDataEventProducer extends DataFireEventProducer<BicycleDock,
   @Override
   public void sendEvent(List<Event<BicycleDock, BicyclesDataEventType>> events) {
     for (Event<BicycleDock, BicyclesDataEventType> event : events) {
-      System.out.println(event.getMessage().getName() + " - "+ event.getEventType().name());
+      System.out.println(event.getMessage().getName() + " - "+ event.getEventType().name() + " cycles available = " + event.getMessage().getCyclesAvailable());
     }
   }
 }
