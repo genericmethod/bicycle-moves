@@ -1,7 +1,7 @@
 package com.bicyclemoves.data.datafire;
 
 import com.bicyclemoves.data.model.BicycleDock;
-import com.genericmethod.feedfire.exception.DataFireException;
+import com.genericmethod.datafire.exception.DataFireException;
 import org.junit.Test;
 
 import java.util.List;

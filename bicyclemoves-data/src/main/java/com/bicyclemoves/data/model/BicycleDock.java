@@ -1,7 +1,7 @@
 
 package com.bicyclemoves.data.model;
 
-import com.genericmethod.feedfire.cache.CacheableObject;
+import com.genericmethod.datafire.cache.CacheableObject;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 import org.apache.commons.lang3.builder.EqualsBuilder;

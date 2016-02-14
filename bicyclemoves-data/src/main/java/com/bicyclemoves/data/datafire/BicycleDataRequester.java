@@ -1,6 +1,6 @@
 package com.bicyclemoves.data.datafire;
 
-import com.genericmethod.feedfire.request.DataFireOkHttpRequester;
+import com.genericmethod.datafire.request.DataFireOkHttpRequester;
 import com.squareup.okhttp.HttpUrl;
 
 import org.springframework.stereotype.Component;

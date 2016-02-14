@@ -1,11 +1,11 @@
 package com.bicyclemoves.data.datafire;
 
 import com.bicyclemoves.data.model.BicycleDock;
-import com.genericmethod.feedfire.cache.CacheService;
-import com.genericmethod.feedfire.event.DataFireEventNotifier;
-import com.genericmethod.feedfire.mapper.DataFireMapper;
-import com.genericmethod.feedfire.request.DataFireRequestScheduler;
-import com.genericmethod.feedfire.request.DataFireRequester;
+import com.genericmethod.datafire.cache.CacheService;
+import com.genericmethod.datafire.event.DataFireEventNotifier;
+import com.genericmethod.datafire.mapper.DataFireMapper;
+import com.genericmethod.datafire.request.DataFireRequestScheduler;
+import com.genericmethod.datafire.request.DataFireRequester;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;

@@ -3,8 +3,8 @@ package com.bicyclemoves.data.datafire;
 
 import com.bicyclemoves.data.model.BicycleData;
 import com.bicyclemoves.data.model.BicycleDock;
-import com.genericmethod.feedfire.exception.DataFireException;
-import com.genericmethod.feedfire.mapper.DataFireMapper;
+import com.genericmethod.datafire.exception.DataFireException;
+import com.genericmethod.datafire.mapper.DataFireMapper;
 import com.google.gson.Gson;
 import org.springframework.stereotype.Component;
 

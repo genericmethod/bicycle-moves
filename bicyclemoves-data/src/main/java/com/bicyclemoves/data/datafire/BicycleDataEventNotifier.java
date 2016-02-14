@@ -2,10 +2,10 @@ package com.bicyclemoves.data.datafire;
 
 import com.bicyclemoves.data.enums.BicyclesDataEventType;
 import com.bicyclemoves.data.model.BicycleDock;
-import com.genericmethod.feedfire.cache.CacheService;
-import com.genericmethod.feedfire.event.DataFireEventNotifier;
-import com.genericmethod.feedfire.event.DataFireEventProducer;
-import com.genericmethod.feedfire.event.DataFireEvent;
+import com.genericmethod.datafire.cache.CacheService;
+import com.genericmethod.datafire.event.DataFireEventNotifier;
+import com.genericmethod.datafire.event.DataFireEventProducer;
+import com.genericmethod.datafire.event.DataFireEvent;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;

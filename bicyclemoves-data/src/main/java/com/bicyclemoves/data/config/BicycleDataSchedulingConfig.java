@@ -1,8 +1,8 @@
 package com.bicyclemoves.data.config;
 
 import com.bicyclemoves.data.datafire.BicycleDataRequestScheduler;
-import com.genericmethod.feedfire.config.DataFireSchedulerConfig;
-import com.genericmethod.feedfire.request.DataFireRequestScheduler;
+import com.genericmethod.datafire.config.DataFireSchedulerConfig;
+import com.genericmethod.datafire.request.DataFireRequestScheduler;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.scheduling.Trigger;
