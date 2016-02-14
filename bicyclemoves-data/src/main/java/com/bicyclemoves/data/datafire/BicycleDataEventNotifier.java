@@ -5,7 +5,7 @@ import com.bicyclemoves.data.model.BicycleDock;
 import com.genericmethod.feedfire.cache.CacheService;
 import com.genericmethod.feedfire.event.DataFireEventNotifier;
 import com.genericmethod.feedfire.event.DataFireEventProducer;
-import com.genericmethod.feedfire.event.Event;
+import com.genericmethod.feedfire.event.DataFireEvent;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -33,13 +33,13 @@ public class BicycleDataEventNotifier extends DataFireEventNotifier<BicycleDock,
   }
 
   @Override
-  public List<Event<BicycleDock, BicyclesDataEventType>> getEvent(BicycleDock cachedObj,
+  public List<DataFireEvent<BicycleDock, BicyclesDataEventType>> getEvent(BicycleDock cachedObj,
                                                                   BicycleDock feedObject) {
 
-    List<Event<BicycleDock, BicyclesDataEventType>> events = new ArrayList<Event<BicycleDock, BicyclesDataEventType>>();
+    List<DataFireEvent<BicycleDock, BicyclesDataEventType>> events = new ArrayList<DataFireEvent<BicycleDock, BicyclesDataEventType>>();
 
     if (cachedObj == null && feedObject != null){
-      events.add(new Event<BicycleDock, BicyclesDataEventType>(feedObject,BicyclesDataEventType.BICYCLE_DOCK_ADDED));
+      events.add(new DataFireEvent<BicycleDock, BicyclesDataEventType>(feedObject,BicyclesDataEventType.BICYCLE_DOCK_ADDED));
       return events;
     }
 
@@ -47,11 +47,11 @@ public class BicycleDataEventNotifier extends DataFireEventNotifier<BicycleDock,
 
       if (!cachedObj.getCyclesAvailable().equals(feedObject.getCyclesAvailable())){
         log.info(cachedObj.getName() + " BICYCLE_AVAILABLITY_CHANGED " + cachedObj.getCyclesAvailable() + " >> " + feedObject.getCyclesAvailable());
-        events.add(new Event<BicycleDock, BicyclesDataEventType>(feedObject, BicyclesDataEventType.BICYCLE_AVAILABLITY_CHANGED));
+        events.add(new DataFireEvent<BicycleDock, BicyclesDataEventType>(feedObject, BicyclesDataEventType.BICYCLE_AVAILABLITY_CHANGED));
       }
 
       if (!cachedObj.getCyclesBroken().equals(feedObject.getCyclesBroken())){
-        events.add(new Event<BicycleDock, BicyclesDataEventType>(feedObject, BicyclesDataEventType.BICYCLE_BROKEN_CHANGED));
+        events.add(new DataFireEvent<BicycleDock, BicyclesDataEventType>(feedObject, BicyclesDataEventType.BICYCLE_BROKEN_CHANGED));
       }
     }
 

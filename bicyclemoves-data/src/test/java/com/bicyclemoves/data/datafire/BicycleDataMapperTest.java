@@ -1,7 +1,7 @@
 package com.bicyclemoves.data.datafire;
 
 import com.bicyclemoves.data.model.BicycleDock;
-import com.genericmethod.feedfire.exception.FeedFireException;
+import com.genericmethod.feedfire.exception.DataFireException;
 import org.junit.Test;
 
 import java.util.List;
@@ -11,7 +11,7 @@ import static org.junit.Assert.assertEquals;
 public class BicycleDataMapperTest {
 
     @Test
-    public void testMapper() throws FeedFireException {
+    public void testMapper() throws DataFireException {
         String jsonData = "{\n" +
                 "  \"bounding_box\": {\n" +
                 "    \"northeast_corner_coords\": [51.52456169, -0.176415994],\n" +
