@@ -49,6 +49,18 @@
                 <scope>import</scope>
             </dependency>
 
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-messaging</artifactId>
+                <version>4.2.3.RELEASE</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.bicyclemoves</groupId>
+                <artifactId>bicyclemoves-data</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
         </dependencies>
 
 

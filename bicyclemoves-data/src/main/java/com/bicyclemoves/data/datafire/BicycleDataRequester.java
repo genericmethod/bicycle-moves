@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 public class BicycleDataRequester extends DataFireOkHttpRequester {
 
   @Override
-  public HttpUrl getFeedUrl() {
+  public HttpUrl getDataEndpointUrl() {
 
     return new HttpUrl.Builder()
             .scheme("https")

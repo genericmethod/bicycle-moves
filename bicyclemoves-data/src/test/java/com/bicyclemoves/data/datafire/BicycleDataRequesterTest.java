@@ -9,7 +9,7 @@ public class BicycleDataRequesterTest {
   @Test
   public void testDataRequester(){
     BicycleDataRequester requester = new BicycleDataRequester();
-    assertNotNull(requester.getFeedUrl());
+    assertNotNull(requester.getDataEndpointUrl());
   }
 
 }
