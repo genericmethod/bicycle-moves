@@ -17,7 +17,7 @@ public class BicycleDataRequester extends DataFireOkHttpRequester {
             .addPathSegment("api")
             .addPathSegment("3")
             .addPathSegment("nearby")
-            .addQueryParameter("location", "51.50464718920731,-0.011419123251457108")
+            .addQueryParameter("location", "51.51515019423544,-0.10143098244529414")
             .addQueryParameter("kinds", "cycledock")
             .addQueryParameter("region_id", "uk-london")
             .build();
