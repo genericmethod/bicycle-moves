@@ -23,4 +23,5 @@ public class WebSocketConfig extends AbstractWebSocketMessageBrokerConfigurer {
         // use the /app prefix for others
         config.setApplicationDestinationPrefixes("/app");
     }
+
 }

@@ -4,6 +4,7 @@ import com.bicyclemoves.data.enums.BicyclesDataEventType;
 import com.bicyclemoves.data.model.BicycleDock;
 import com.genericmethod.datafire.event.DataFireEvent;
 import com.genericmethod.datafire.event.DataFireEventProducer;
+import org.apache.commons.collections4.CollectionUtils;
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
@@ -21,7 +22,9 @@ public class BicycleDataEventProducer extends DataFireEventProducer<BicycleDock,
       System.out.println(event.getMessage().getName() + " - "+ event.getEventType().name() + " cycles available = " + event.getMessage().getCyclesAvailable());
     }
 
-    RestTemplate restTemplate = new RestTemplate();
-    final String response = restTemplate.postForObject("https://pushbike-data.herokuapp.com/bdevent", events, String.class);
+    if(CollectionUtils.isNotEmpty(events)){
+      RestTemplate restTemplate = new RestTemplate();
+      final String response = restTemplate.postForObject("http://localhost:8080/bdevent", events, String.class);
+    }
   }
 }

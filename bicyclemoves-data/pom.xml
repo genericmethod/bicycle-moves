@@ -17,6 +17,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>1.8</java.version>
+        <spring.http.converters.preferred-json-mapper>gson</spring.http.converters.preferred-json-mapper>
     </properties>
 
     <dependencies>
@@ -49,8 +50,8 @@
             <artifactId>validation-api</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.github.genericmethod</groupId>
-            <artifactId>feed-fire</artifactId>
+            <groupId>com.genericmethod.datafire</groupId>
+            <artifactId>data-fire</artifactId>
         </dependency>
         <dependency>
             <groupId>com.google.code.gson</groupId>
