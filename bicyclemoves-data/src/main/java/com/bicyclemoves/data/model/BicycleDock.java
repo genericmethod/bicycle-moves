@@ -1,50 +1,54 @@
 
 package com.bicyclemoves.data.model;
 
+import com.fasterxml.jackson.annotation.*;
 import com.genericmethod.datafire.cache.CacheableObject;
-import com.google.gson.annotations.Expose;
-import com.google.gson.annotations.SerializedName;
-import org.apache.commons.lang3.builder.EqualsBuilder;
-import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 
 import javax.annotation.Generated;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
+@JsonInclude(JsonInclude.Include.NON_NULL)
 @Generated("org.jsonschema2pojo")
+@JsonPropertyOrder({
+    "cycles_available",
+    "cycles_broken",
+    "name",
+    "kind",
+    "cycles_spaces",
+    "brand_id",
+    "coords",
+    "walk_time_seconds",
+    "cycles_total",
+    "id"
+})
 public class BicycleDock extends CacheableObject{
 
-    @SerializedName("cycles_available")
-    @Expose
+    @JsonProperty("cycles_available")
     private Integer cyclesAvailable;
-    @SerializedName("cycles_broken")
-    @Expose
+    @JsonProperty("cycles_broken")
     private Integer cyclesBroken;
-    @SerializedName("name")
-    @Expose
+    @JsonProperty("name")
     private String name;
-    @SerializedName("kind")
-    @Expose
+    @JsonProperty("kind")
     private String kind;
-    @SerializedName("cycles_spaces")
-    @Expose
+    @JsonProperty("cycles_spaces")
     private Integer cyclesSpaces;
-    @SerializedName("brand_id")
-    @Expose
+    @JsonProperty("brand_id")
     private String brandId;
-    @SerializedName("coords")
-    @Expose
+    @JsonProperty("coords")
     private List<Double> coords = new ArrayList<Double>();
-    @SerializedName("walk_time_seconds")
-    @Expose
+    @JsonProperty("walk_time_seconds")
     private Integer walkTimeSeconds;
-    @SerializedName("cycles_total")
-    @Expose
+    @JsonProperty("cycles_total")
     private Integer cyclesTotal;
-    @SerializedName("id")
-    @Expose
+    @JsonProperty("id")
     private String id;
+    @JsonIgnore
+    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
     /**
      * No args constructor for use in serialization
@@ -89,6 +93,7 @@ public class BicycleDock extends CacheableObject{
      * @return
      *     The cyclesAvailable
      */
+    @JsonProperty("cycles_available")
     public Integer getCyclesAvailable() {
         return cyclesAvailable;
     }
@@ -98,6 +103,7 @@ public class BicycleDock extends CacheableObject{
      * @param cyclesAvailable
      *     The cycles_available
      */
+    @JsonProperty("cycles_available")
     public void setCyclesAvailable(Integer cyclesAvailable) {
         this.cyclesAvailable = cyclesAvailable;
     }
@@ -107,6 +113,7 @@ public class BicycleDock extends CacheableObject{
      * @return
      *     The cyclesBroken
      */
+    @JsonProperty("cycles_broken")
     public Integer getCyclesBroken() {
         return cyclesBroken;
     }
@@ -116,6 +123,7 @@ public class BicycleDock extends CacheableObject{
      * @param cyclesBroken
      *     The cycles_broken
      */
+    @JsonProperty("cycles_broken")
     public void setCyclesBroken(Integer cyclesBroken) {
         this.cyclesBroken = cyclesBroken;
     }
@@ -125,6 +133,7 @@ public class BicycleDock extends CacheableObject{
      * @return
      *     The name
      */
+    @JsonProperty("name")
     public String getName() {
         return name;
     }
@@ -134,6 +143,7 @@ public class BicycleDock extends CacheableObject{
      * @param name
      *     The name
      */
+    @JsonProperty("name")
     public void setName(String name) {
         this.name = name;
     }
@@ -143,6 +153,7 @@ public class BicycleDock extends CacheableObject{
      * @return
      *     The kind
      */
+    @JsonProperty("kind")
     public String getKind() {
         return kind;
     }
@@ -152,6 +163,7 @@ public class BicycleDock extends CacheableObject{
      * @param kind
      *     The kind
      */
+    @JsonProperty("kind")
     public void setKind(String kind) {
         this.kind = kind;
     }
@@ -161,6 +173,7 @@ public class BicycleDock extends CacheableObject{
      * @return
      *     The cyclesSpaces
      */
+    @JsonProperty("cycles_spaces")
     public Integer getCyclesSpaces() {
         return cyclesSpaces;
     }
@@ -170,6 +183,7 @@ public class BicycleDock extends CacheableObject{
      * @param cyclesSpaces
      *     The cycles_spaces
      */
+    @JsonProperty("cycles_spaces")
     public void setCyclesSpaces(Integer cyclesSpaces) {
         this.cyclesSpaces = cyclesSpaces;
     }
@@ -179,6 +193,7 @@ public class BicycleDock extends CacheableObject{
      * @return
      *     The brandId
      */
+    @JsonProperty("brand_id")
     public String getBrandId() {
         return brandId;
     }
@@ -188,6 +203,7 @@ public class BicycleDock extends CacheableObject{
      * @param brandId
      *     The brand_id
      */
+    @JsonProperty("brand_id")
     public void setBrandId(String brandId) {
         this.brandId = brandId;
     }
@@ -197,6 +213,7 @@ public class BicycleDock extends CacheableObject{
      * @return
      *     The coords
      */
+    @JsonProperty("coords")
     public List<Double> getCoords() {
         return coords;
     }
@@ -206,6 +223,7 @@ public class BicycleDock extends CacheableObject{
      * @param coords
      *     The coords
      */
+    @JsonProperty("coords")
     public void setCoords(List<Double> coords) {
         this.coords = coords;
     }
@@ -215,6 +233,7 @@ public class BicycleDock extends CacheableObject{
      * @return
      *     The walkTimeSeconds
      */
+    @JsonProperty("walk_time_seconds")
     public Integer getWalkTimeSeconds() {
         return walkTimeSeconds;
     }
@@ -224,6 +243,7 @@ public class BicycleDock extends CacheableObject{
      * @param walkTimeSeconds
      *     The walk_time_seconds
      */
+    @JsonProperty("walk_time_seconds")
     public void setWalkTimeSeconds(Integer walkTimeSeconds) {
         this.walkTimeSeconds = walkTimeSeconds;
     }
@@ -233,6 +253,7 @@ public class BicycleDock extends CacheableObject{
      * @return
      *     The cyclesTotal
      */
+    @JsonProperty("cycles_total")
     public Integer getCyclesTotal() {
         return cyclesTotal;
     }
@@ -242,6 +263,7 @@ public class BicycleDock extends CacheableObject{
      * @param cyclesTotal
      *     The cycles_total
      */
+    @JsonProperty("cycles_total")
     public void setCyclesTotal(Integer cyclesTotal) {
         this.cyclesTotal = cyclesTotal;
     }
@@ -251,6 +273,7 @@ public class BicycleDock extends CacheableObject{
      * @return
      *     The id
      */
+    @JsonProperty("id")
     public String getId() {
         return id;
     }
@@ -260,6 +283,7 @@ public class BicycleDock extends CacheableObject{
      * @param id
      *     The id
      */
+    @JsonProperty("id")
     public void setId(String id) {
         this.id = id;
     }
@@ -269,21 +293,14 @@ public class BicycleDock extends CacheableObject{
         return ToStringBuilder.reflectionToString(this);
     }
 
-    @Override
-    public int hashCode() {
-        return new HashCodeBuilder().append(cyclesAvailable).append(cyclesBroken).append(name).append(kind).append(cyclesSpaces).append(brandId).append(coords).append(walkTimeSeconds).append(cyclesTotal).append(id).toHashCode();
+    @JsonAnyGetter
+    public Map<String, Object> getAdditionalProperties() {
+        return this.additionalProperties;
     }
 
-    @Override
-    public boolean equals(Object other) {
-        if (other == this) {
-            return true;
-        }
-        if ((other instanceof BicycleDock) == false) {
-            return false;
-        }
-        BicycleDock rhs = ((BicycleDock) other);
-        return new EqualsBuilder().append(cyclesAvailable, rhs.cyclesAvailable).append(cyclesBroken, rhs.cyclesBroken).append(name, rhs.name).append(kind, rhs.kind).append(cyclesSpaces, rhs.cyclesSpaces).append(brandId, rhs.brandId).append(coords, rhs.coords).append(walkTimeSeconds, rhs.walkTimeSeconds).append(cyclesTotal, rhs.cyclesTotal).append(id, rhs.id).isEquals();
+    @JsonAnySetter
+    public void setAdditionalProperty(String name, Object value) {
+        this.additionalProperties.put(name, value);
     }
 
 }

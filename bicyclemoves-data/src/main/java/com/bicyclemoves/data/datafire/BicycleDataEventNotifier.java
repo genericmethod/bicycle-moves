@@ -45,12 +45,12 @@ public class BicycleDataEventNotifier extends DataFireEventNotifier<BicycleDock,
 
     if (cachedObj != null && feedObject != null) {
 
-      if (!cachedObj.getCyclesAvailable().equals(feedObject.getCyclesAvailable())){
+      if (cachedObj.getCyclesAvailable() != feedObject.getCyclesAvailable()){
         log.info(cachedObj.getName() + " BICYCLE_AVAILABLITY_CHANGED " + cachedObj.getCyclesAvailable() + " >> " + feedObject.getCyclesAvailable());
         events.add(new DataFireEvent<BicycleDock, BicyclesDataEventType>(feedObject, BicyclesDataEventType.BICYCLE_AVAILABLITY_CHANGED));
       }
 
-      if (!cachedObj.getCyclesBroken().equals(feedObject.getCyclesBroken())){
+      if (cachedObj.getCyclesBroken() != feedObject.getCyclesBroken()){
         events.add(new DataFireEvent<BicycleDock, BicyclesDataEventType>(feedObject, BicyclesDataEventType.BICYCLE_BROKEN_CHANGED));
       }
     }

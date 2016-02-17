@@ -1,28 +1,32 @@
 
 package com.bicyclemoves.data.model;
 
-import com.google.gson.annotations.Expose;
-import com.google.gson.annotations.SerializedName;
-import org.apache.commons.lang3.builder.EqualsBuilder;
-import org.apache.commons.lang3.builder.HashCodeBuilder;
+import com.fasterxml.jackson.annotation.*;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 
 import javax.annotation.Generated;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
+@JsonInclude(JsonInclude.Include.NON_NULL)
 @Generated("org.jsonschema2pojo")
+@JsonPropertyOrder({
+    "bounding_box",
+    "elements",
+    "last_updated_time"
+})
 public class BicycleData {
 
-    @SerializedName("bounding_box")
-    @Expose
+    @JsonProperty("bounding_box")
     private BicycleDataBoundingBox boundingBox;
-    @SerializedName("elements")
-    @Expose
+    @JsonProperty("elements")
     private List<BicycleDock> elements = new ArrayList<BicycleDock>();
-    @SerializedName("last_updated_time")
-    @Expose
+    @JsonProperty("last_updated_time")
     private String lastUpdatedTime;
+    @JsonIgnore
+    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
     /**
      * No args constructor for use in serialization
@@ -48,6 +52,7 @@ public class BicycleData {
      * @return
      *     The boundingBox
      */
+    @JsonProperty("bounding_box")
     public BicycleDataBoundingBox getBoundingBox() {
         return boundingBox;
     }
@@ -57,6 +62,7 @@ public class BicycleData {
      * @param boundingBox
      *     The bounding_box
      */
+    @JsonProperty("bounding_box")
     public void setBoundingBox(BicycleDataBoundingBox boundingBox) {
         this.boundingBox = boundingBox;
     }
@@ -66,6 +72,7 @@ public class BicycleData {
      * @return
      *     The elements
      */
+    @JsonProperty("elements")
     public List<BicycleDock> getElements() {
         return elements;
     }
@@ -75,6 +82,7 @@ public class BicycleData {
      * @param elements
      *     The elements
      */
+    @JsonProperty("elements")
     public void setElements(List<BicycleDock> elements) {
         this.elements = elements;
     }
@@ -84,6 +92,7 @@ public class BicycleData {
      * @return
      *     The lastUpdatedTime
      */
+    @JsonProperty("last_updated_time")
     public String getLastUpdatedTime() {
         return lastUpdatedTime;
     }
@@ -93,6 +102,7 @@ public class BicycleData {
      * @param lastUpdatedTime
      *     The last_updated_time
      */
+    @JsonProperty("last_updated_time")
     public void setLastUpdatedTime(String lastUpdatedTime) {
         this.lastUpdatedTime = lastUpdatedTime;
     }
@@ -102,21 +112,14 @@ public class BicycleData {
         return ToStringBuilder.reflectionToString(this);
     }
 
-    @Override
-    public int hashCode() {
-        return new HashCodeBuilder().append(boundingBox).append(elements).append(lastUpdatedTime).toHashCode();
+    @JsonAnyGetter
+    public Map<String, Object> getAdditionalProperties() {
+        return this.additionalProperties;
     }
 
-    @Override
-    public boolean equals(Object other) {
-        if (other == this) {
-            return true;
-        }
-        if ((other instanceof BicycleData) == false) {
-            return false;
-        }
-        BicycleData rhs = ((BicycleData) other);
-        return new EqualsBuilder().append(boundingBox, rhs.boundingBox).append(elements, rhs.elements).append(lastUpdatedTime, rhs.lastUpdatedTime).isEquals();
+    @JsonAnySetter
+    public void setAdditionalProperty(String name, Object value) {
+        this.additionalProperties.put(name, value);
     }
 
 }

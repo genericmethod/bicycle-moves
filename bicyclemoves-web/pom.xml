@@ -53,9 +53,10 @@
         </dependency>
 
         <dependency>
-            <groupId>com.google.code.gson</groupId>
-            <artifactId>gson</artifactId>
+            <groupId>com.github.genericmethod</groupId>
+            <artifactId>datafire</artifactId>
         </dependency>
+
 
         <dependency>
             <groupId>com.bicyclemoves</groupId>
