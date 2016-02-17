@@ -12,8 +12,8 @@ public class BicycleDataApplication {
   private static final Logger log = Logger.getLogger(BicycleDataApplication.class);
 
   public static void main(String[] args) throws Exception {
-    log.info("**** Starting Application");
+    log.info("**** Starting Bicycle Data Application");
     SpringApplication.run(BicycleDataApplication.class);
-    log.info("**** Starting Application");
+    log.info("**** Bicycle Data Application Started");
   }
 }
