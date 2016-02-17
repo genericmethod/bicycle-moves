@@ -44,8 +44,8 @@
             <artifactId>validation-api</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.genericmethod.datafire</groupId>
-            <artifactId>data-fire</artifactId>
+            <groupId>com.github.genericmethod</groupId>
+            <artifactId>feed-fire</artifactId>
         </dependency>
         <dependency>
             <groupId>com.google.code.gson</groupId>
