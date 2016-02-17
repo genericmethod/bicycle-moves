@@ -20,6 +20,13 @@
         <spring.http.converters.preferred-json-mapper>gson</spring.http.converters.preferred-json-mapper>
     </properties>
 
+    <repositories>
+        <repository>
+            <id>jitpack.io</id>
+            <url>https://jitpack.io</url>
+        </repository>
+    </repositories>
+
     <dependencies>
 
         <dependency>
@@ -50,8 +57,9 @@
             <artifactId>validation-api</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.genericmethod.datafire</groupId>
-            <artifactId>data-fire</artifactId>
+            <groupId>com.github.genericmethod</groupId>
+            <artifactId>datafire</artifactId>
+            <version>1.0.0-alpha</version>
         </dependency>
         <dependency>
             <groupId>com.google.code.gson</groupId>
