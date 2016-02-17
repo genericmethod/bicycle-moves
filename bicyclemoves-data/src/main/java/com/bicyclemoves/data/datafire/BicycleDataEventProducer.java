@@ -22,6 +22,6 @@ public class BicycleDataEventProducer extends DataFireEventProducer<BicycleDock,
     }
 
     RestTemplate restTemplate = new RestTemplate();
-    final String response = restTemplate.postForObject("http://localhost:8080/bdevent", events, String.class);
+    final String response = restTemplate.postForObject("https://pushbike-data.herokuapp.com/bdevent", events, String.class);
   }
 }
